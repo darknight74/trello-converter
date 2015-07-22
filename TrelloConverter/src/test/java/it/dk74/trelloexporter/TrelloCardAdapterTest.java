@@ -1,6 +1,7 @@
 package it.dk74.trelloexporter;
 
 import static org.junit.Assert.*;
+import it.dk74.trelloexporter.adapter.TrelloCardAdapter;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -17,13 +18,13 @@ public class TrelloCardAdapterTest {
 		Card test = new Card();
 		test.setTitle("App 4.2 - esecuzione test su build ID maggio");
 		test.setDescription("Esecuzione test su Build ID maggio");
+		test.setIdList("5583eecff24dc5fb455835b6");
 		test.setDueDate(null);
 		TrelloCardAdapter adapter = new TrelloCardAdapter();
 		URL fileURL = this.getClass().getResource("/Card.json");
 		try {
 			Card out = adapter.fromJson(new FileReader(fileURL.getFile()));
 			assertEquals(test, out);
-			
 		} catch (FileNotFoundException e) {
 			fail(e.getMessage());
 		} catch (IOException e) {

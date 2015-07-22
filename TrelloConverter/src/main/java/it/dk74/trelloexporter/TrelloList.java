@@ -5,6 +5,7 @@ import java.util.List;
 
 public class TrelloList {
 	private String mName;
+	private String mId;
 	private List<Card> mCards;
 	
 	public TrelloList() {
@@ -26,5 +27,13 @@ public class TrelloList {
 	
 	public void addCard(Card card) {
 		mCards.add(card);
+	}
+	
+	public String getId() {
+		return mId;
+	}
+
+	public void setId(String mId) {
+		this.mId = mId;
 	}
 }
