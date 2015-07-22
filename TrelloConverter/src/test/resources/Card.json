@@ -1,0 +1,49 @@
+{
+		"id": "5583f1f16c7e5fde3eed2742",
+		"checkItemStates": [],
+		"closed": false,
+		"dateLastActivity": "2015-06-23T15:57:07.040Z",
+		"desc": "Esecuzione test su Build ID maggio",
+		"descData": {
+			"emoji": {
+				
+			}
+		},
+		"idBoard": "5583eebeb204c1531f5fed82",
+		"idList": "5583eecff24dc5fb455835b6",
+		"idMembersVoted": [],
+		"idShort": 6,
+		"idAttachmentCover": null,
+		"manualCoverAttachment": false,
+		"idLabels": ["5583f1fbc3caa18119e8d565"],
+		"name": "App 4.2 - esecuzione test su build ID maggio",
+		"pos": 65535,
+		"shortLink": "PbPWYae2",
+		"badges": {
+			"votes": 0,
+			"viewingMemberVoted": false,
+			"subscribed": false,
+			"fogbugz": "",
+			"checkItems": 0,
+			"checkItemsChecked": 0,
+			"comments": 0,
+			"attachments": 0,
+			"description": true,
+			"due": null
+		},
+		"due": null,
+		"email": "ingfabrisandrea+5583ee292f99774b91798200+5583f1f16c7e5fde3eed2742+59b514ffb12b8525925166cfed9d91d62447a1d4@boards.trello.com",
+		"idChecklists": [],
+		"idMembers": [],
+		"labels": [{
+			"id": "5583f1fbc3caa18119e8d565",
+			"idBoard": "5583eebeb204c1531f5fed82",
+			"name": "IT",
+			"color": "orange",
+			"uses": 11
+		}],
+		"shortUrl": "https://trello.com/c/PbPWYae2",
+		"subscribed": false,
+		"url": "https://trello.com/c/PbPWYae2/6-app-4-2-esecuzione-test-su-build-id-maggio",
+		"attachments": []
+	}
