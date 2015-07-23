@@ -15,7 +15,7 @@ public class TrelloCardAdapterTest {
 
 	@Test
 	public void testReadJsonReader() {
-		Card test = new Card();
+		TrelloCard test = new TrelloCard();
 		test.setTitle("App 4.2 - esecuzione test su build ID maggio");
 		test.setDescription("Esecuzione test su Build ID maggio");
 		test.setIdList("5583eecff24dc5fb455835b6");
@@ -23,7 +23,7 @@ public class TrelloCardAdapterTest {
 		TrelloCardAdapter adapter = new TrelloCardAdapter();
 		URL fileURL = this.getClass().getResource("/Card.json");
 		try {
-			Card out = adapter.fromJson(new FileReader(fileURL.getFile()));
+			TrelloCard out = adapter.fromJson(new FileReader(fileURL.getFile()));
 			assertEquals(test, out);
 		} catch (FileNotFoundException e) {
 			fail(e.getMessage());
