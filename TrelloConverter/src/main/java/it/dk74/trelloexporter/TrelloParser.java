@@ -2,8 +2,8 @@ package it.dk74.trelloexporter;
 
 public class TrelloParser {
 
-	public static Card getCard(String jsonCards, int idx) {
-		Card card = null;
+	public static TrelloCard getCard(String jsonCards, int idx) {
+		TrelloCard card = null;
 		return card;
 	}
 }
