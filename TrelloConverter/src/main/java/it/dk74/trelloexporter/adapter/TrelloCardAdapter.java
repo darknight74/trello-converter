@@ -1,6 +1,6 @@
 package it.dk74.trelloexporter.adapter;
 
-import it.dk74.trelloexporter.Card;
+import it.dk74.trelloexporter.TrelloCard;
 
 import java.io.IOException;
 
@@ -12,11 +12,11 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.JsonWriter;
 
-public class TrelloCardAdapter extends TypeAdapter<Card> {
+public class TrelloCardAdapter extends TypeAdapter<TrelloCard> {
 	private static Logger LOG = LogManager.getLogger(TrelloCardAdapter.class);
 
 	@Override
-	public void write(JsonWriter out, Card value) throws IOException {
+	public void write(JsonWriter out, TrelloCard value) throws IOException {
 		// TODO Auto-generated method stub
 		
 	}
@@ -24,10 +24,10 @@ public class TrelloCardAdapter extends TypeAdapter<Card> {
 	
 	
 	@Override
-	public Card read(JsonReader in) throws IOException {
+	public TrelloCard read(JsonReader in) throws IOException {
 		final String logHead = "read - ";
 		LOG.info(logHead + "start method");
-		Card out = new Card();
+		TrelloCard out = new TrelloCard();
 		in.beginObject();
 		while (in.hasNext()) {
 			String key = in.nextName();
