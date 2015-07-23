@@ -9,7 +9,7 @@ public class TrelloBoard {
 	
 	private String mName = "";
 	private String mId = "";
-	private List<Card> mCards = new Vector<Card>();
+	private List<TrelloCard> mCards = new Vector<TrelloCard>();
 	private Map<String, String> mLists = new HashMap<String, String>();
 	
 	public String getName() {
@@ -28,15 +28,15 @@ public class TrelloBoard {
 		this.mId = id;
 	}
 	
-	public List<Card> getCards() {
+	public List<TrelloCard> getCards() {
 		return mCards;
 	}
 	
-	public void setCards(List<Card> cards) {
+	public void setCards(List<TrelloCard> cards) {
 		this.mCards = cards;
 	}
 	
-	public void addCard(Card card) {
+	public void addCard(TrelloCard card) {
 		mCards.add(card);
 	}
 	
@@ -44,10 +44,23 @@ public class TrelloBoard {
 		mLists.put(listId, listName);
 	}
 	
-		@Override
+	@Override
 	public String toString() {
 		return "{id: \"" + mId + "\"; " 
 				+ "name: \""	+ mName + "\"; " 
 				+  "\"}";
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		boolean ret = false;
+		if (obj instanceof TrelloBoard) {
+			TrelloBoard toTest = (TrelloBoard) obj;
+			ret = this.mId.equals(toTest.mId) //check BoardId
+					&& this.mName.equals(toTest.mName) //check Board Name
+					&& this.mCards.equals(toTest.mCards) //check Cards
+					&& this.mLists.equals(toTest.mLists); //check Lists
+		} 
+		return ret;
 	}
 }
