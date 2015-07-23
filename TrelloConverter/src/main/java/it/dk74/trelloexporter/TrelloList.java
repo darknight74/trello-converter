@@ -6,11 +6,8 @@ import java.util.List;
 public class TrelloList {
 	private String mName;
 	private String mId;
-	private List<Card> mCards;
 	
 	public TrelloList() {
-		mName = null;
-		mCards = new ArrayList<Card>();
 	}
 	
 	public String getName() {
@@ -21,19 +18,23 @@ public class TrelloList {
 		this.mName = mName;
 	}
 	
-	public List<Card> getCards() {
-		return mCards;
-	}
-	
-	public void addCard(Card card) {
-		mCards.add(card);
-	}
-	
 	public String getId() {
 		return mId;
 	}
 
 	public void setId(String mId) {
 		this.mId = mId;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		boolean ret = false;
+		if (obj instanceof TrelloList) {
+			TrelloList toTest = (TrelloList) obj;
+			ret = this.mId.equals(toTest.mId)
+					&& this.mName.equals(toTest.mName);
+			
+		}
+		return ret;
 	}
 }
