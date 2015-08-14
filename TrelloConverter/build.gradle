@@ -1,8 +1,12 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'application'
 
 sourceCompatibility = 1.5
 version = '1.0'
+
+mainClassName = "it.dk74.trelloexporter.CliParser"
+
 jar {
     manifest {
         attributes 'Implementation-Title': 'Trello Converter',
@@ -20,7 +24,7 @@ dependencies {
     compile 'com.google.code.gson:gson:2.3.1'
     compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.3'
   	compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.3'
-	
+	compile group: 'org.apache.poi', name:'poi-ooxml', version: '3.12'
 	testCompile group: 'junit', name: 'junit', version: '4.+'
 	testCompile "org.mockito:mockito-core:2.+"
 }
