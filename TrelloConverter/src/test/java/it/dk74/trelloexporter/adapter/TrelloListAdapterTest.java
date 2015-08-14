@@ -2,7 +2,7 @@ package it.dk74.trelloexporter.adapter;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
-import it.dk74.trelloexporter.TrelloList;
+import it.dk74.trelloexporter.model.TrelloList;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

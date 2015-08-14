@@ -1,6 +1,6 @@
 package it.dk74.trelloexporter.adapter;
 
-import it.dk74.trelloexporter.TrelloCard;
+import it.dk74.trelloexporter.model.TrelloCard;
 
 import java.io.IOException;
 

@@ -1,6 +1,6 @@
 package it.dk74.trelloexporter.adapter;
 
-import it.dk74.trelloexporter.TrelloList;
+import it.dk74.trelloexporter.model.TrelloList;
 
 import java.io.IOException;
 import java.util.Map;

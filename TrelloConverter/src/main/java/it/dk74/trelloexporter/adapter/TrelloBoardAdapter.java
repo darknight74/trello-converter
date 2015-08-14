@@ -1,8 +1,8 @@
 package it.dk74.trelloexporter.adapter;
 
-import it.dk74.trelloexporter.TrelloCard;
-import it.dk74.trelloexporter.TrelloBoard;
-import it.dk74.trelloexporter.TrelloList;
+import it.dk74.trelloexporter.model.TrelloBoard;
+import it.dk74.trelloexporter.model.TrelloCard;
+import it.dk74.trelloexporter.model.TrelloList;
 
 import java.io.IOException;
 
@@ -55,7 +55,7 @@ public class TrelloBoardAdapter extends TypeAdapter<TrelloBoard> {
 				TrelloListAdapter listAdapter = new TrelloListAdapter();
 				while(in.hasNext()) {
 					TrelloList list = listAdapter.read(in);
-					out.addList(list.getId(), list.getName());
+					out.addList(list);
 					LOG.debug(logHead + "adding <list>; value [" + list.getId() + ", " + list.getName() + "]");
 				}
 				in.endArray();
