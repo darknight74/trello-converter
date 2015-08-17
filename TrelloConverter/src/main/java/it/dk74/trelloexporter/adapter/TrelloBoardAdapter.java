@@ -11,7 +11,6 @@ import org.apache.logging.log4j.Logger;
 
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.JsonWriter;
 
 public class TrelloBoardAdapter extends TypeAdapter<TrelloBoard> {
