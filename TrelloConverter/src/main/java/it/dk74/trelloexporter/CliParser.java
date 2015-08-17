@@ -11,21 +11,25 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.IOException;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.DefaultParser;
+import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
-import org.apache.commons.cli.ParseException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.poi.ss.usermodel.Workbook;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 public class CliParser {
+	
+	private static final Logger LOG = LogManager.getLogger(CliParser.class);
 
 	public static void main(String[] args) {
+		LOG.info("Start Trello JSON parsing");
 		Options options = new Options();
 		Option input = Option.builder("i")
 				.argName("json")
@@ -41,6 +45,9 @@ public class CliParser {
 				.build();
 		options.addOption(input);
 		options.addOption(output);
+		
+		HelpFormatter hf = new HelpFormatter();
+		
 		DefaultParser parser = new DefaultParser();
 		BufferedReader br;
 		try {
@@ -67,16 +74,15 @@ public class CliParser {
 			ExcelGenerator generator = ExcelGenerator.getInstance();
 			Workbook excel = generator.generate(board);
 			excel.write(new FileOutputStream(xlsxOut));
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			LOG.info("End Trello JSON parsing");
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+			System.out.println("Missing input or output file");
+			LOG.error("Missing file", e);
+		} catch (Exception e) {
+			hf.printHelp("TrelloConverter", options);
+			LOG.error("General error", e);
+		} 
+		
 	}
 
 }
