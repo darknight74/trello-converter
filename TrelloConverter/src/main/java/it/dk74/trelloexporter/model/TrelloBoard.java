@@ -1,9 +1,7 @@
 package it.dk74.trelloexporter.model;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Vector;
 
 public class TrelloBoard {
@@ -11,7 +9,8 @@ public class TrelloBoard {
 	private String mName = "";
 	private String mId = "";
 	private List<TrelloCard> mCards = new Vector<TrelloCard>();
-	private List<TrelloList> mLists = new ArrayList<TrelloList>();
+	private List<TrelloList> mLists = new Vector<TrelloList>();
+	private List<TrelloAction> mActions = new ArrayList<TrelloAction>();
 	
 	public String getName() {
 		return mName;
@@ -60,12 +59,31 @@ public class TrelloBoard {
 			ret = this.mId.equals(toTest.mId) //check BoardId
 					&& this.mName.equals(toTest.mName) //check Board Name
 					&& this.mCards.equals(toTest.mCards) //check Cards
-					&& this.mLists.equals(toTest.mLists); //check Lists
+					&& this.mLists.equals(toTest.mLists) //check Lists
+					&& this.mActions.equals(toTest.mActions); //check Actions
 		} 
 		return ret;
 	}
 
 	public List<TrelloList> getLists() {
 		return mLists;
+	}
+
+	/**
+	 * @return the mActions
+	 */
+	public List<TrelloAction> getActions() {
+		return mActions;
+	}
+
+	/**
+	 * @param mActions the mActions to set
+	 */
+	public void setActions(List<TrelloAction> mActions) {
+		this.mActions = mActions;
+	}
+	
+	public void addAction(TrelloAction action) {
+		mActions.add(action);
 	}
 }

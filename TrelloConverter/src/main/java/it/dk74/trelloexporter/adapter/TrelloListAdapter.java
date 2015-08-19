@@ -3,7 +3,6 @@ package it.dk74.trelloexporter.adapter;
 import it.dk74.trelloexporter.model.TrelloList;
 
 import java.io.IOException;
-import java.util.Map;
 
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;

@@ -1,7 +1,5 @@
 package it.dk74.trelloexporter.model;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class TrelloList {
 	private String mName;
@@ -41,5 +39,11 @@ public class TrelloList {
 			
 		}
 		return ret;
+	}
+	
+	@Override
+	public String toString() {
+		return "{id: \"" + mId + "\"; "
+				+ "name: \"" + mName + "\"}";
 	}
 }
