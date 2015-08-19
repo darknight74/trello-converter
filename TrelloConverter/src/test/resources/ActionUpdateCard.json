@@ -1,0 +1,38 @@
+{
+			"id" : "55bf13d7d561489646e2618a",
+			"idMemberCreator" : "5583f67e379fa0ac9122e800",
+			"data" : {
+				"listAfter" : {
+					"name" : "Closed",
+					"id" : "5583eeda816d632cdfda0ea3"
+				},
+				"listBefore" : {
+					"name" : "WIP",
+					"id" : "5583eed320b369bb0647e352"
+				},
+				"board" : {
+					"shortLink" : "ar13eypU",
+					"name" : "MyWind issue",
+					"id" : "5583eebeb204c1531f5fed82"
+				},
+				"card" : {
+					"shortLink" : "tCngB5th",
+					"idShort" : 38,
+					"name" : "App 4.1.1 iOS",
+					"id" : "55b5d90265dbb9d2725392c3",
+					"idList" : "5583eeda816d632cdfda0ea3"
+				},
+				"old" : {
+					"idList" : "5583eed320b369bb0647e352"
+				}
+			},
+			"type" : "updateCard",
+			"date" : "2015-08-03T07:10:15.240Z",
+			"memberCreator" : {
+				"id" : "5583f67e379fa0ac9122e800",
+				"avatarHash" : "8bdff0d0233c8669f85e783771104aa1",
+				"fullName" : "Walter Tocchi",
+				"initials" : "WT",
+				"username" : "waltertocchi"
+			}
+		}

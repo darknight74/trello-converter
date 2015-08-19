@@ -1,0 +1,31 @@
+ {
+			"id" : "55d43e30739d090449c88def",
+			"idMemberCreator" : "5583f67e379fa0ac9122e800",
+			"data" : {
+				"list" : {
+					"name" : "Closed",
+					"id" : "5583eeda816d632cdfda0ea3"
+				},
+				"board" : {
+					"shortLink" : "ar13eypU",
+					"name" : "MyWind issue",
+					"id" : "5583eebeb204c1531f5fed82"
+				},
+				"card" : {
+					"shortLink" : "VU3PyHd5",
+					"idShort" : 53,
+					"name" : "DB WLHp con problemi di connessione da ecare-pre01",
+					"id" : "55d43e14b23e44eb48b2ea1a"
+				},
+				"text" : "Risolti attraverso editing resolv.conf da parte di sistemisti"
+			},
+			"type" : "commentCard",
+			"date" : "2015-08-19T08:28:32.514Z",
+			"memberCreator" : {
+				"id" : "5583f67e379fa0ac9122e800",
+				"avatarHash" : "8bdff0d0233c8669f85e783771104aa1",
+				"fullName" : "Andrea Fabris",
+				"initials" : "AF",
+				"username" : "andreafabriswind"
+			}
+		}
